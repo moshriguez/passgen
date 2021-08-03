@@ -1,0 +1,26 @@
+{
+  "name": "passgen",
+  "version": "1.0.0",
+  "description": "Simple Password Generator",
+  "main": "index.js",
+  "preferGlobal": true,
+  "bin": "./index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moshriguez/passgen.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moshriguez/passgen/issues"
+  },
+  "homepage": "https://github.com/moshriguez/passgen#readme",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "clipboardy": "^2.3.0",
+    "commander": "^8.1.0"
+  }
+}
