@@ -5,21 +5,28 @@ const clipboardy = require('clipboardy')
 
 const createPassword = require('./utilities/createPassword')
 const savePassword = require('./utilities/savePassword')
+const leetcodePassword = require('./utilities/leetcodePassword')
 const log = console.log
 
 program.version('1.0.0').description('Simple Password Generator')
 
 
 .option('-l, --length <number>', 'length of password', '8')
+.option('-lc, --leetcode <pass phrase...>', 'length of password')
 .option('-s, --save', 'save password to passwords.txt')
 .option('-nn, --no-numbers', 'remove numbers')
 .option('-ns, --no-symbols', 'remove symbols')
 .parse()
 
-const { length, save, numbers, symbols } = program.opts()
+const { length, save, numbers, symbols, leetcode } = program.opts()
 
 // Get generated password
-const generatedPassword = createPassword(length, numbers, symbols)
+let generatedPassword
+if (leetcode) {
+    generatedPassword = leetcodePassword(leetcode)
+} else {
+    generatedPassword = createPassword(length, numbers, symbols)
+}
 
 // save generated password
 if (save) {
