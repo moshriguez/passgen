@@ -23,7 +23,7 @@ const { length, save, numbers, symbols, munge } = program.opts()
 // Get generated password
 let generatedPassword
 if (munge) {
-    generatedPassword = mungePassword(munge)
+    generatedPassword = mungePassword(munge, numbers, symbols)
 } else {
     generatedPassword = createPassword(length, numbers, symbols)
 }

@@ -60,13 +60,11 @@ Options:
 ```
 `--munge` can take multiple arguments. All strings will be concatinated and spaces will be removed.
 
-Please note, `--no-numbers` and `--no-symbols` do not work with `--munge` at this time.
-
 ## Acknowledgements
 This project started as a node.js tutorial by Traversy Media. See their <a href="https://www.youtube.com/watch?v=3Xx83JAktXk&ab_channel=TraversyMedia" target="_blank">video</a>.
 
 ### TODOs
-- [ ] add no number/symbol funtionality to 'mungePassword' function
+- [x] add no number/symbol funtionality to 'mungePassword' function
 - [x] add a site option and add it to the save file
 
 

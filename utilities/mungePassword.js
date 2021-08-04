@@ -27,11 +27,17 @@ const translator = {
     Z: '2'
 }
 const capitol = /[A-Z]/
+const numbers = /[abefotz]/
+const symbols = /[hisx]/
 
-const mungePassword = (passPhrase) => {
+const mungePassword = (passPhrase, hasNumbers, hasSymbols) => {
 
     return passPhrase.join('').split('').map(letter => {
         if (capitol.test(letter)) {
+            return letter
+        } else if (!hasNumbers && numbers.test(letter)) {
+            return letter
+        } else if (!hasSymbols && symbols.test(letter)) {
             return letter
         } else {
             return translator[letter.toUpperCase()]
