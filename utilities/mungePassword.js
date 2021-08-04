@@ -28,7 +28,7 @@ const translator = {
 }
 const capitol = /[A-Z]/
 
-const leetcodePassword = (passPhrase) => {
+const mungePassword = (passPhrase) => {
 
     return passPhrase.join('').split('').map(letter => {
         if (capitol.test(letter)) {
@@ -39,6 +39,6 @@ const leetcodePassword = (passPhrase) => {
         }).join('')
 }
 
-module.exports = leetcodePassword
+module.exports = mungePassword
 
-// console.log(leetcodePassword(['we', 'are', 'drink', 'rum', 'like', 'pirates']))
+// console.log(mungePassword(['we', 'are', 'drink', 'rum', 'like', 'pirates']))
