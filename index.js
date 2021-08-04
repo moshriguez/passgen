@@ -13,7 +13,7 @@ program.version('1.0.0').description('Simple Password Generator')
 
 .option('-l, --length <number>', 'length of password', '8')
 .option('-m, --munge <pass phrase...>', 'receive a munged password given a pass phrase')
-.option('-s, --save', 'save password to passwords.txt')
+.option('-s, --save [site]', 'save password to passwords.txt')
 .option('-nn, --no-numbers', 'remove numbers')
 .option('-ns, --no-symbols', 'remove symbols')
 .parse()
@@ -30,7 +30,7 @@ if (munge) {
 
 // save generated password
 if (save) {
-    savePassword(generatedPassword)
+    savePassword(generatedPassword, save)
 }
 
 // Copy to clipboard
