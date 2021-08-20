@@ -13,7 +13,7 @@ program.version('1.0.0').description('Simple Password Generator')
 
 .option('-l, --length <number>', 'length of password', '8')
 .option('-m, --munge <pass phrase...>', 'receive a munged password given a pass phrase')
-.option('-s, --save [label]', 'save password to passwords.txt with optional label')
+.option('-s, --save [label...]', 'save password to passwords.txt with optional label')
 .option('-nn, --no-numbers', 'remove numbers')
 .option('-ns, --no-symbols', 'remove symbols')
 .parse()
